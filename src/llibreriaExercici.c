@@ -18,12 +18,13 @@ void pintaMenu()
 
 void quantitatLletres()
 {
+    cls();
     LLETRA l[MAXLLETRA];
     FILE *f;
     char car;
     int qtt = 0, i = 0;
-    if (qttLinies() == 1)
-    {
+    // if (qttLinies() == 1)
+    // {
         f = fopen(ubicacioLorem2, "rt");
         car = fgetc(f);
         while (feof(f) == 0)
@@ -31,41 +32,35 @@ void quantitatLletres()
             car = tolower(car);
             if (car >= 'a' && car <= 'z')
             {
-                printf("\n%c", car);
                 guardaLletraDinsEstructura(l, car, &qtt);
             }
             car = fgetc(f);
         }
         fclose(f);
-    }
-    while (i < qtt)
-    {
-        printf("\nLLETRA: %c QTT: %d", l[i].lletra, l[i].qtt);
-        i++;
-    }
-    
+    //}
+
+    mostraResultatLletres(l,qtt);
+    printf("\n\nPrem una tecla per a tornar al menu");
 }
 
 void guardaLletraDinsEstructura(LLETRA l[], char car, int *qtt)
 {
-    int i = 0;
-
-    while (i <= *qtt)
+    for (int i = 0; i <= *qtt; i++)
     {
-        if (l[i].lletra == car)
+        if (car == l[i].lletra) 
         {
             l[i].qtt++;
-            break;
+            break;        
         }
         else if (i == *qtt)
         {
-            i++;
             l[i].lletra = car;
-            l[i].qtt++;
+            l[i].qtt = 1;
             (*qtt)++;
+            i++;
         }
-        i++;
     }
+    
 }
 
 int qttLinies()
@@ -84,4 +79,14 @@ int qttLinies()
     fclose(f);
 
     return cont;
+}
+
+void mostraResultatLletres(LLETRA l[],int qtt)
+{
+    printf("\nHI HA UN TOTAL DE %d LLETRES\nTOTAL DE VEGADES QUE APAREIX CADA LLETRA");
+    for (int i = 0; i < qtt; i++)
+    {
+        printf("\nLLETRA: %c QTT: %d", l[i].lletra, l[i].qtt);
+    }
+    
 }

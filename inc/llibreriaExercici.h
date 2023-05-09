@@ -3,7 +3,7 @@
 //incloure les llibreries que es necessiten
 #include <stdbool.h>
     
-     #define ubicacioLorem2 "./fitxers/lorem1.txt"
+     #define ubicacioLorem2 "./fitxers/lorem3.txt"
      #define ubicacioFitxer "./fitxers/"
      #define MAXLLETRA 30
 
@@ -26,6 +26,7 @@ void pintaMenu();
 void quantitatLletres();
 void guardaLletraDinsEstructura(LLETRA [], char, int *);
 int qttLinies();
+void mostraResultatLletres(LLETRA [],int);
 
 
 
