@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "llibreriapropia.h": "c",
+        "stdio.h": "c"
+    }
+    "files.encoding": "windows1252"
+}
