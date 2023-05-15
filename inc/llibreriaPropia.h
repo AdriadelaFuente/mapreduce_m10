@@ -6,6 +6,7 @@
     #define FICADENA '\0'
     #define MAXCADENA 100
     #define SALTLINIA '\n'
+    #define ESPAI ' '
     void acabament (void);
     int demanaNumeroEntreDosValors(int ,int );
     int generarNumeroEntreDosValors(int ,int );

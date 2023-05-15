@@ -27,6 +27,7 @@ int main()
 		{
 			case SORTIR: printf("Adeu");break;
 			case COMPTALLETRES: quantitatLletres();break;
+			case COMPTAPARAULES: quantitatParaules();break;
 		}
 		getch();
 		cls();

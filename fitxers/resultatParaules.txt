@@ -1,0 +1,8 @@
+Lorem - 2
+ipsum - 1
+dolor - 1
+sit - 1
+amet - 1
+consectetur - 1
+adipiscing - 1
+elit - 1

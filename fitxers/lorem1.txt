@@ -1,1 +1,1 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Lorem lorem ipsum dolor sit amet, consectetur adipiscing elit.
